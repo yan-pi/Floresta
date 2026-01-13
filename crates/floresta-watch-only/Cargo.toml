@@ -25,8 +25,9 @@ floresta-common = { workspace = true, features = ["descriptors-no-std"] }
 rand = { workspace = true }
 
 [features]
-default = ["std"]
+default = ["std", "silent-payments"]
 memory-database = []
+silent-payments = []
 # The default features in common are `std` and `descriptors-std` (which is a superset of `descriptors-no-std`)
 std = ["floresta-common/default", "serde/std"]
 

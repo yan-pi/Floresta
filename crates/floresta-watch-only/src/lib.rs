@@ -22,6 +22,8 @@ pub mod kv_database;
 #[cfg(any(test, feature = "memory-database"))]
 pub mod memory_database;
 pub mod merkle;
+#[cfg(feature = "silent-payments")]
+pub mod silent_payments;
 
 use bitcoin::consensus::deserialize;
 use bitcoin::consensus::encode::serialize_hex;
