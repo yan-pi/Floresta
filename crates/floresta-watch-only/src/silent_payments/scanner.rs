@@ -3,8 +3,6 @@
 //! This module implements the scanning logic for detecting Silent Payment
 //! outputs in transactions and blocks.
 
-// Placeholder for Phase 4 implementation
-
 use crate::silent_payments::SilentPaymentKeys;
 
 /// Scanner for detecting Silent Payment outputs in blocks

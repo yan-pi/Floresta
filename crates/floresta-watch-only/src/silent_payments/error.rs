@@ -11,34 +11,27 @@ use floresta_common::prelude::*;
 pub enum SilentPaymentError {
     /// Failed to extract public key from input at index {input_index}: {reason}
     InputKeyExtractionFailed {
-        /// Index of the input that failed extraction
         input_index: usize,
-
-        /// Detailed reason for the failure
         reason: String,
     },
 
     /// Invalid scan private key: {reason}
     InvalidScanKey {
-        /// Reason the scan key is invalid
         reason: String,
     },
 
     /// Invalid spend public key: {reason}
     InvalidSpendPubkey {
-        /// Reason the spend pubkey is invalid
         reason: String,
     },
 
     /// ECDH computation failed for input sum: {reason}
     EcdhFailed {
-        /// Reason ECDH failed
         reason: String,
     },
 
     /// Shared secret derivation failed: {reason}
     SharedSecretFailed {
-        /// Reason shared secret derivation failed
         reason: String,
     },
 
@@ -46,8 +39,6 @@ pub enum SilentPaymentError {
     OutputDerivationFailed {
         /// Index of the output that failed derivation
         output_index: u32,
-
-        /// Reason the derivation failed
         reason: String,
     },
 
@@ -55,8 +46,6 @@ pub enum SilentPaymentError {
     LabelComputationFailed {
         /// Label value that failed (m value)
         label: u32,
-
-        /// Reason the computation failed
         reason: String,
     },
 
@@ -68,25 +57,21 @@ pub enum SilentPaymentError {
 
     /// Database operation failed: {reason}
     DatabaseError {
-        /// Reason the database operation failed
         reason: String,
     },
 
     /// Invalid label value {label}: must be 0 to 2^31-1
     InvalidLabelValue {
-        /// The invalid label value
         label: u32,
     },
 
     /// Serialization failed: {reason}
     SerializationFailed {
-        /// Reason serialization failed
         reason: String,
     },
 
     /// Deserialization failed: {reason}
     DeserializationFailed {
-        /// Reason deserialization failed
         reason: String,
     },
 }
